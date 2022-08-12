@@ -1,9 +1,9 @@
 function groupAnagrams(strs: string[]): string[][] {
   let result: string[][] = [];
   const map = {};
-  if (strs.length === 1) return [strs];
+  let sorted: string;
   
-  let sorted;
+  if (strs.length === 1) return [strs];
   
   for (let str of strs) {
     sorted = str.split('').sort().join('');
